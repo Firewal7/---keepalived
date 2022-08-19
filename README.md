@@ -4,15 +4,16 @@
 Интерфейс на Вирт машинех 
 Сеть: 1) Сетевой мост Wifi 2) Внутреняя сеть 
 
-# The loopback network interface
+/etc/network/interfaces
+The loopback network interface
 auto lo
 iface lo inet loopback
 
-# The primary network interface
+ The primary network interface
 auto enp0s3
 iface enp0s3 inet dhcp
 
-# Виртуальный адаптер хоста
+ Виртуальный адаптер хоста
 auto enp0s8
 iface enp0s8 inet static
 address 192.168.1.1
