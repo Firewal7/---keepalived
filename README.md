@@ -4,7 +4,7 @@
 # Интерфейс на Вирт машинех 
 Сеть: 1) Сетевой мост Wifi 2) Внутреняя сеть 
 
-/etc/network/interfaces
+# /etc/network/interfaces
 The loopback network interface
 auto lo
 iface lo inet loopback
@@ -19,10 +19,10 @@ iface enp0s8 inet static
 address 192.168.1.1
 netmask 255.255.255.0
 
-Установка должна проводиться на двух системах (нодах).
-Файл конфигурации находится: /etc/keepalived/keepalived.conf
+# Установка должна проводиться на двух системах (нодах).
+# Файл конфигурации находится: /etc/keepalived/keepalived.conf
 
-Первая
+# Первая
 vrrp_instance failover_test {
 state MASTER
 interface enp0s8
@@ -41,7 +41,7 @@ virtual_ipaddress {
 }
 }
 
-Вторая
+# Вторая
 
 vrrp_instance failover_test {
 state BACKUP
@@ -61,10 +61,10 @@ virtual_ipaddress {
 }
 }
 
-Запуск службы: systemctl start keepalived
-Добавление службы в автозагрузку: systemctl enable keepalived
-Проверка работоспособности сервиса: systemctl status keepalived
+# Запуск службы: systemctl start keepalived
+# Добавление службы в автозагрузку: systemctl enable keepalived
+# Проверка работоспособности сервиса: systemctl status keepalived
 
-Отключить интерфейс ip link set dev enp0s8 down
-Включить ip link set dev enp0s8 up
+# Отключить интерфейс ip link set dev enp0s8 down
+# Включить ip link set dev enp0s8 up
 
