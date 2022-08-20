@@ -1,7 +1,7 @@
 # -Отказоустойчивость - keepalived
 Установим keepalived: apt install keepalived
 
-Интерфейс на Вирт машинех 
+# Интерфейс на Вирт машинех 
 Сеть: 1) Сетевой мост Wifi 2) Внутреняя сеть 
 
 /etc/network/interfaces
